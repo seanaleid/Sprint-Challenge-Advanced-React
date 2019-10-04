@@ -21,35 +21,15 @@ const Navbar = () => {
     <nav className="navbar">
       <h1>Women's World Cup</h1>
       <div className="dark-mode__toggle">
-        {/* version 1 */}
-        {/* <button
+        <div className="switch-modes">
+          <p>Dark Mode</p>
+        </div>
+        <button
           onClick={toggleMode}
           className={darkMode ? 'toggle toggled' : 'toggle'}
-        /> */}
+        />
 
-        {/* version 2 */}
-        {/* <ToggleButton
-          value="check"
-          selected={darkMode}
-          onChange={() => {
-            setDarkMode(!toggleMode);
-          }}  
-        >
-        <CheckIcon />
-        </ToggleButton> */}
-
-        {/* version 3 */}
-        {/* took out, made an individual toggle to import into App.js no toggle in the navbar for this sprint */}
-        {/* <label class="switch">
-          <input type="checkbox" />
-          <span class="slider"></span>
-        </label>
-
-          
-        <label class="switch">
-          <input type="checkbox" />
-          <span class="slider round"></span>
-        </label> */}
+       
       </div>
     </nav>
   );
@@ -57,3 +37,26 @@ const Navbar = () => {
 
 export default Navbar;
 
+//  version 2 
+//         <ToggleButton
+//           value="check"
+//           selected={darkMode}
+//           onChange={() => {
+//             setDarkMode(!toggleMode);
+//           }}  
+//         >
+//         <CheckIcon />
+//         </ToggleButton> 
+
+//         version 3 
+//         took out, made an individual toggle to import into App.js no toggle in the navbar for this sprint */}
+//          <label class="switch">
+//           <input type="checkbox" />
+//           <span class="slider"></span>
+//         </label>
+
+          
+//         <label class="switch">
+//           <input type="checkbox" />
+//           <span class="slider round"></span>
+//         </label> 

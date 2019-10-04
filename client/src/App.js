@@ -5,7 +5,7 @@ import axios from "axios";
 //component imports
 import PlayerCard from "./components/PlayerCard";
 import Navbar from "./components/Navigation";
-import Toggle from "./components/toggle";
+// import Toggle from "./components/toggle";
 
 class App extends React.Component {
   //create class component and state
@@ -31,15 +31,17 @@ class App extends React.Component {
   }
 
   render(){
+    //ALWAYS console.log!! this was showing the first empty card
+    console.log(this.state.player)
     return (
       <div className="App">
         <Navbar />
         <header className="App-header">
           <h1>Test, hello world!</h1>
-          <Toggle />
+      
           <div className="card-container">
 
-            <PlayerCard key={this.state.player} player={this.state.player}/>
+            {/* <PlayerCard key={player} player={player}/> */}
             {this.state.player.map((player, key) => {
             console.log(player);
             return <PlayerCard key={key} player={player} />
