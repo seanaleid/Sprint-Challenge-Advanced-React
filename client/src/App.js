@@ -4,8 +4,8 @@ import axios from "axios";
 
 //component imports
 import PlayerCard from "./components/PlayerCard";
-
-//hook imports 
+import Navbar from "./components/Navigation";
+import Toggle from "./components/toggle";
 
 class App extends React.Component {
   //create class component and state
@@ -33,9 +33,12 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
+        <Navbar />
         <header className="App-header">
           <h1>Test, hello world!</h1>
+          <Toggle />
           <div className="card-container">
+
             <PlayerCard key={this.state.player} player={this.state.player}/>
             {this.state.player.map((player, key) => {
             console.log(player);
