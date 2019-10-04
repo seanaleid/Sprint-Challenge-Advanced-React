@@ -23,31 +23,41 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit the `ANSWERS.md` file to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Why would you use class component over function components (removing hooks from the question)?
+- [ ] Why would you use class component over function components (removing hooks from the question)? - Personally, I prefer functional components, but after searching online, I might have to use class components if: the component needs to maintain state, the component is rerendering too much and it must be controlled using `shouldComponentUpdate`, or if I need a container component. 
+
+
 - [ ] Name three lifecycle methods and their purposes.
-- [ ] What is the purpose of a custom hook?
-- [ ] Why is it important to test our apps?
+
+-componentDidMount(): This method is called when your component is ready and mounted. It beginning stage of your component's lifecycle. It's what triggers your component to appear on screen. It can also take state which is updated by the next method. 
+
+-componentDidUpdate(): When a user interacts with the UI and updates (basically does anything like a click, fills an input, etc) it activates an update. If the code is written properly, it should check for the previous props and update them. 
+
+-componentWillUnmount(): This method basically cleans everything up (like cancelling API calls, clearing timers,or cleaning up caches ) before unmounting and destroying the component in the browser. 
+
+- [ ] What is the purpose of a custom hook? - The purpose of a custom hook is to reuse it. It helps keep your code DRY. 
+
+- [ ] Why is it important to test our apps? - Testing our apps gives us confidence. This means that we have evidence that our app functions properly. If it breaks after, we know it wasn't the original code, another developer must have changed something, a user must have done something different, etc. It's a way t have a paper trail. 
 
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add TL as collaborator on Github.
-- [ ] Clone your OWN version of Repo. **(Not Lambda's by mistake!)**
-- [ ] Create a new Branch locally: `git checkout -b <firstName-lastName>`.
-- [ ] Run `yarn` to download dependencies.
-- [ ] Run the server using `yarn start` or `node server.js`.
-- [ ] In a separate terminal cd into the `client` folder and run `yarn install` to download dependencies.
-- [ ] Still inside the `client` folder run `yarn start` to run the client application.
-- [ ] Implement the project on this Branch, **committing progress & changes often.**
-- [ ] Push commits: `git push origin <firstName-lastName>`.
+- [X] Create a forked copy of this project.
+- [X] Add TL as collaborator on Github.
+- [X] Clone your OWN version of Repo. **(Not Lambda's by mistake!)**
+- [X] Create a new Branch locally: `git checkout -b <firstName-lastName>`.
+- [X] Run `yarn` to download dependencies.
+- [X] Run the server using `yarn start` or `node server.js`.
+- [X] In a separate terminal cd into the `client` folder and run `yarn install` to download dependencies.
+- [X] Still inside the `client` folder run `yarn start` to run the client application.
+- [X] Implement the project on this Branch, **committing progress & changes often.**
+- [X] Push commits: `git push origin <firstName-lastName>`.
 
 Follow these steps for completing your project:
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
-- [ ] Add your Project Manager as a Reviewer on the Pull-request.
-- [ ] PM then will count the HW as done by merging the branch back into master.
+- [X] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
+- [X] Add your Project Manager as a Reviewer on the Pull-request.
+- [X] PM then will count the HW as done by merging the branch back into master.
 
 ## Minimum Viable Product
 
