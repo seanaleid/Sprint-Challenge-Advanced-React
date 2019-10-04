@@ -2,6 +2,11 @@ import React from 'react';
 import './App.css';
 import axios from "axios";
 
+//component imports
+import PlayerCard from "./components/PlayerCard";
+
+//hook imports 
+
 class App extends React.Component {
   //create class component and state
   state={
@@ -30,6 +35,13 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <h1>Test, hello world!</h1>
+          <div className="card-container">
+            <PlayerCard key={this.state.player} player={this.state.player}/>
+            {this.state.player.map((player, key) => {
+            console.log(player);
+            return <PlayerCard key={key} player={player} />
+            })}
+          </div>
         </header>
       </div>
     );
